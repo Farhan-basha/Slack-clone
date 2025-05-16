@@ -1,0 +1,196 @@
+
+.chat-body {
+  position: absolute;
+  top: var(--header-height);
+  left: 0;
+  right: 0;
+  bottom: 60px; /* Height of ChatInput */
+  overflow-y: auto;
+  padding: var(--spacing-lg);
+  background-color: #F9FAFB;
+  color: #333;
+}
+
+.message-group {
+  margin-bottom: var(--spacing-lg);
+}
+
+.date-divider {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.date-divider hr {
+  flex: 1;
+  border: none;
+  height: 1px;
+  background-color: #E5E7EB;
+}
+
+.date-divider span {
+  padding: 0 16px;
+  font-size: 14px;
+  color: #666;
+  font-weight: 500;
+}
+
+.message {
+  display: flex;
+  margin-bottom: var(--spacing-lg);
+}
+
+.message-avatar {
+  margin-right: var(--spacing-md);
+  cursor: pointer;
+}
+
+.message-avatar img {
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+}
+
+.avatar-initial {
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  background-color: #1264a3;
+}
+
+.message-content {
+  flex: 1;
+}
+
+.message-header {
+  margin-bottom: var(--spacing-xs);
+}
+
+.message-user {
+  font-weight: bold;
+  margin-right: var(--spacing-sm);
+}
+
+.message-timestamp {
+  font-size: var(--font-size-xs);
+  color: #666;
+}
+
+.message-text {
+  line-height: 1.5;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.message-attachments {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.message-attachment {
+  max-width: 300px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.message-attachment img {
+  max-width: 100%;
+  max-height: 200px;
+  border-radius: 4px;
+  border: 1px solid #E5E7EB;
+}
+
+.file-attachment {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  background-color: #FFFFFF;
+  border: 1px solid #E5E7EB;
+  border-radius: 4px;
+}
+
+.file-type {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1264a3;
+  color: white;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 12px;
+  margin-right: 8px;
+}
+
+.file-name {
+  font-size: 14px;
+  color: #333;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 200px;
+}
+
+.no-messages {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: #666;
+  font-style: italic;
+}
+
+/* User profile modal styling */
+.user-profile-content {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.user-avatar-large {
+  width: 80px;
+  height: 80px;
+  border-radius: 8px;
+  background-color: #1264a3;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  font-weight: bold;
+  margin-right: 20px;
+}
+
+.user-details h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.user-details p {
+  margin: 5px 0;
+}
+
+/* Make avatars look clickable */
+.message-avatar:hover .avatar-initial,
+.message-avatar:hover img {
+  opacity: 0.9;
+  transform: scale(1.05);
+  transition: all 0.2s ease;
+}
+
+/* Responsive adjustments for the chat body */
+@media (max-width: 768px) {
+  .chat-body {
+    left: 0;
+    padding: var(--spacing-md);
+  }
+}

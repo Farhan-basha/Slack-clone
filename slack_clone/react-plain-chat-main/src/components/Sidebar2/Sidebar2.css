@@ -1,0 +1,164 @@
+
+.sidebar2 {
+  width: var(--sidebar2-width);
+  height: 100vh;
+  background-color: #1a1d31; /* Dark blue for sidebar2 */
+  color: #fff;
+  position: fixed;
+  left: var(--sidebar-width);
+  top: 0;
+  padding: var(--spacing-md);
+  overflow-y: auto;
+  z-index: 99;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sidebar2-workspace-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--spacing-md) 0;
+  margin-bottom: var(--spacing-md);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sidebar2-workspace-header h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.sidebar2-edit-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  font-size: 14px;
+  color: #888;
+}
+
+.sidebar2-section {
+  margin-bottom: var(--spacing-lg);
+}
+
+.sidebar2-header {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  cursor: pointer;
+  padding: var(--spacing-xs) 0;
+  color: #ccc;
+}
+
+.expand-icon {
+  font-size: 10px;
+  margin-right: var(--spacing-sm);
+  transition: transform 0.2s ease;
+}
+
+.expand-icon.expanded {
+  transform: rotate(0);
+}
+
+.expand-icon:not(.expanded) {
+  transform: rotate(-90deg);
+}
+
+.sidebar2-content {
+  margin-top: var(--spacing-sm);
+}
+
+.sidebar2-item {
+  padding: var(--spacing-xs) var(--spacing-md);
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  margin: var(--spacing-xs) 0;
+  transition: background-color 0.2s ease;
+  display: flex;
+  align-items: center;
+}
+
+.sidebar2-item:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.sidebar2-item.active {
+  background-color: #1264A3;
+  color: var(--white);
+}
+
+.lock-icon {
+  margin-left: 5px;
+  color: #ccc;
+}
+
+.sidebar2-add-item {
+  padding: var(--spacing-xs) var(--spacing-md);
+  color: #888;
+  cursor: pointer;
+  margin: var(--spacing-xs) 0;
+  transition: color 0.2s ease;
+}
+
+.sidebar2-add-item:hover {
+  color: #fff;
+}
+
+.channel-hash, .dm-status {
+  margin-right: var(--spacing-xs);
+}
+
+.dm-status {
+  color: #2BAC76;
+  font-size: 10px;
+}
+
+.create-channel {
+  padding: var(--spacing-sm) var(--spacing-md);
+}
+
+.create-channel-input {
+  width: 100%;
+  padding: var(--spacing-sm);
+  background-color: #333;
+  border: 1px solid #444;
+  color: #fff;
+  border-radius: var(--border-radius);
+  margin-bottom: var(--spacing-xs);
+}
+
+.channel-input-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.channel-input-actions button {
+  padding: 4px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.channel-input-actions button:first-child {
+  background-color: #1264A3;
+  color: white;
+  border: none;
+}
+
+.channel-input-actions button:last-child {
+  background-color: #333;
+  color: #ccc;
+  border: 1px solid #444;
+}
+
+.sidebar2-icon {
+  margin-right: 8px;
+}
+
+.no-dms {
+  color: #888;
+  padding: var(--spacing-xs) var(--spacing-md);
+  font-style: italic;
+  font-size: 14px;
+}
