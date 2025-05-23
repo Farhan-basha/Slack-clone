@@ -99,6 +99,24 @@ TEMPLATES = [
     },
 ]
 
+
+# ASGI application
+ASGI_APPLICATION = 'slack_clone.routing.application'  # replace with your project name
+
+
+# Channels settings
+# settings.py
+CHANNEL_LAYERS = {
+    "default": {
+        "BACKEND": "channels.layers.InMemoryChannelLayer",  # for development
+        # For production use Redis:
+        # "BACKEND": "channels_redis.core.RedisChannelLayer",
+        # "CONFIG": {
+        #     "hosts": [("redis://127.0.0.1", 6379)],
+        # },
+    },
+}
+
 WSGI_APPLICATION = 'slack_clone.wsgi.application'
 
 

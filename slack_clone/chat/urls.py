@@ -28,4 +28,6 @@ urlpatterns = [
     path('channels/<int:channel_id>/messages/', views.MessageListCreateView.as_view()),
     path('dm-groups/<int:dm_group_id>/messages/', views.MessageListCreateView.as_view()),
     path('messages/<int:pk>/', views.MessageRetrieveUpdateDestroyView.as_view()),
+
+    path('<str:room_name>/', views.room, name='room'),
 ]

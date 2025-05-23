@@ -1,0 +1,9 @@
+pip install djangorestframework-simplejwt
+pip install djangorestframework
+pip install channels channels-redis
+pip install channels
+pip install django-cors-headers
+pip install psycopg2
+pip install django djangorestframework channels djangorestframework-simplejwt psycopg2-binary
+pip install django djangorestframework channels
+pip install psycopg2-binary
